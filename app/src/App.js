@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
+import Colors from "./pages/colors";
+
 const Menu = props => {
   return (
     <div>
@@ -9,7 +11,7 @@ const Menu = props => {
         <li>
           <Link to="/colors">Colors</Link>
         </li>
-        {/* <li>
+        <li>
           <Link to="/buzzwords">Buzzwords</Link>
         </li>
         <li>
@@ -20,7 +22,7 @@ const Menu = props => {
         </li>
         <li>
           <Link to="/emojis">Emojis</Link>
-        </li> */}
+        </li>
       </ul>
     </div>
   );
@@ -32,6 +34,7 @@ const App = props => {
       <div>
         <Switch>
           <Route exact path="/" component={Menu} />
+          <Route exact path="/colors" component={Colors} />
         </Switch>
       </div>
     </BrowserRouter>
